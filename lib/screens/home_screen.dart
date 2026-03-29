@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: Container(
         margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
             currentIndex: _currentIndex,
             onTap: _onTabTapped,
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Colors.white, 
+            backgroundColor: Theme.of(context).colorScheme.surface, 
             selectedItemColor: Colors.orange,
             unselectedItemColor: Colors.grey,
             showUnselectedLabels: true,

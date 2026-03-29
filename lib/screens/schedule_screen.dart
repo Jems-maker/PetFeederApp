@@ -172,8 +172,6 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
             duration: Duration(seconds: 2),
           ),
         );
-        // Return true so HomeScreen knows to reload
-        Navigator.pop(context, true);
       }
     } catch (e) {
       if (mounted) {
@@ -206,7 +204,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                   Container(
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
-                      color: Colors.orange.shade50,
+                      color: Colors.orange.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(color: Colors.orange.shade200),
                     ),
@@ -406,7 +404,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               decoration: BoxDecoration(
                 color: slot.enabled
                     ? slot.color.withOpacity(0.12)
-                    : Colors.grey.shade100,
+                    : Colors.grey.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Row(

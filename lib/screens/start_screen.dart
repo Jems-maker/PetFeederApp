@@ -60,11 +60,15 @@ class _StartScreenState extends State<StartScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Logo
-            Image.asset(
-              'assets/paw_logo.png', 
-              height: 150, 
-              width: 150,
-              errorBuilder: (c, o, s) => const Icon(Icons.pets, size: 150, color: Colors.orange),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(45),
+              child: Image.asset(
+                'assets/Pawcare.png', 
+                height: 450, 
+                width: 450,
+                fit: BoxFit.cover,
+                errorBuilder: (c, o, s) => const Icon(Icons.pets, size: 450, color: Colors.orange),
+              ),
             ),
             const SizedBox(height: 30),
             

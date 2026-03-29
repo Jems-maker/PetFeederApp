@@ -367,7 +367,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       const CircleAvatar(
                         radius: 25,
                         backgroundColor: Colors.white,
-                        backgroundImage: AssetImage('assets/paw_logo.png'),
+                        backgroundImage: AssetImage('assets/Pawcare.png'),
                       ),
                       const SizedBox(width: 15),
                       Column(

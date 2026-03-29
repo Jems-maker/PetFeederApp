@@ -66,7 +66,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         ],
                       ),
                       child: Image.asset(
-                        'assets/paw_logo.png',
+                        'assets/Pawcare.png',
                         height: 100,
                         width: 100,
                         errorBuilder: (_, __, ___) => const Icon(

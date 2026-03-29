@@ -120,7 +120,7 @@ class _PinScreenState extends State<PinScreen> {
                   ],
                 ),
                 child: Image.asset(
-                  'assets/paw_logo.png',
+                  'assets/Pawcare.png',
                   height: 80,
                   width: 80,
                   errorBuilder: (_, __, ___) => const Icon(

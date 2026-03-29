@@ -418,9 +418,16 @@ class _DashboardViewState extends State<DashboardView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100], // Softer background for cards to pop
-      body: SingleChildScrollView(
-        child: Column(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor, // Softer background for cards to pop
+      body: RefreshIndicator(
+        color: Colors.orange,
+        onRefresh: () async {
+          reloadSchedule();
+          await Future.delayed(const Duration(milliseconds: 800));
+        },
+        child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             // Beautiful Custom Header
@@ -444,12 +451,6 @@ class _DashboardViewState extends State<DashboardView> {
                     children: [
                       Row(
                         children: [
-                          const CircleAvatar(
-                            radius: 16,
-                            backgroundColor: Colors.white,
-                            backgroundImage: AssetImage('assets/paw_logo.png'),
-                          ),
-                          const SizedBox(width: 8),
                           Text(
                             _t(context, 'dashboard'),
                             style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 18), 
@@ -507,7 +508,7 @@ class _DashboardViewState extends State<DashboardView> {
                            backgroundColor: Colors.orange.shade50,
                            backgroundImage: _petImageUrl.isNotEmpty 
                                ? NetworkImage(_petImageUrl) 
-                               : const AssetImage('assets/paw_logo.png') as ImageProvider,
+                               : const AssetImage('assets/Pawcare.png') as ImageProvider,
                          ),
                        ),
                     ],
@@ -647,6 +648,7 @@ class _DashboardViewState extends State<DashboardView> {
             ),
           ],
         ),
+      ),
       ),
     );
   }

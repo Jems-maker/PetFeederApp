@@ -111,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                   child: Image.asset(
-                    'assets/paw_logo.png',
+                    'assets/Pawcare.png',
                     height: 80,
                     width: 80,
                     errorBuilder: (_, __, ___) => const Icon(Icons.pets, size: 80, color: Colors.orange),

@@ -18,7 +18,7 @@ class TailwindCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget cardContent = Container(
       decoration: BoxDecoration(
-        color: color ?? Colors.white,
+        color: color ?? Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
