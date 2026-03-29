@@ -1,0 +1,57 @@
+name: pet_feeder_apk
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Icons
+  cupertino_icons: ^1.0.8
+  
+  # Firebase & Notifications
+  firebase_core: ^4.4.0
+  firebase_database: ^12.1.3
+  firebase_messaging: ^16.1.1
+  flutter_local_notifications: ^20.0.0
+  firebase_auth: ^6.1.4
+  flutter_localizations:
+    sdk: flutter
+  
+  # Date Formatting
+  intl: ^0.20.2
+  email_otp: ^3.1.0
+  mailer: ^6.6.0
+  shared_preferences: ^2.5.4
+  timezone: ^0.10.1
+  url_launcher: ^6.3.0
+  flutter_blue_plus: ^1.34.5
+  wifi_scan: ^0.4.1+2
+  permission_handler: ^12.0.1
+  http: ^1.6.0
+  wifi_iot: ^0.3.18
+  fl_chart: ^1.2.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/paw_logo.png"
+  remove_alpha_ios: true
+flutter:
+  uses-material-design: true
+
+  # --- IMPORTANT: THIS IS THE NEW PART ---
+  assets:
+    - assets/paw_logo.png
